@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "backend/server.js", "use": "@vercel/node" },
+    { "src": "src/index.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/encrypt-transaction", "dest": "/backend/server.js" }
+  ]
+}
